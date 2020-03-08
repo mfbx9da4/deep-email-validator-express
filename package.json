@@ -12,7 +12,7 @@
     "start": "yarn watch-node",
     "watch-node": "nodemon dist/index.js",
     "test": "jest --verbose",
-    "build": "tsc",
+    "build": "tsc -p .",
     "watch-test": "yarn test -- --watchAll",
     "watch-ts": "tsc -w",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
@@ -45,6 +45,6 @@
     "nodemon": "^1.19.2",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.3"
+    "typescript": "3.8.3"
   }
 }
