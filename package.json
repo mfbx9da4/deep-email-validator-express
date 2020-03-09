@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "deep-email-validator": "^0.1.5",
+    "deep-email-validator": "^0.1.8",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "forever": "^2.0.0",
