@@ -1,5 +1,25 @@
 # Deep Email Validation Endpoint
 
-docker tag local-image:tagname mfbx9da4/validate-email-endpoint:latest
-docker build . -t mfbx9da4/validate-email-endpoint:latest
-docker push mfbx9da4/validate-email-endpoint:latest
+## Getting Started
+
+```
+yarn
+yarn build
+yarn start
+curl -XPOST -d '{"email":"xxx@yyy.zzz"}' -H "Content-type: application/json" http://localhost:8080/email/validate
+```
+
+Deploy Docker image
+
+```
+docker login
+docker build . -t mfbx9da4/validate-email-endpoint
+# Push to docker hub
+docker push mfbx9da4/validate-email-endpoint
+docker run -t -p 8080:8080 -e PORT=8080 mfbx9da4/validate-email-endpoint
+heroku container:login
+# Push to heroku repo
+heroku container:push web
+heroku container:release web
+heroku open
+```
