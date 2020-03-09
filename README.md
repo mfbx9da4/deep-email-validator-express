@@ -7,6 +7,7 @@ yarn
 yarn build
 yarn start
 curl -XPOST -d '{"email":"xxx@yyy.zzz"}' -H "Content-type: application/json" http://localhost:8080/email/validate
+curl -XPOST -d '{"email":"xxx@yyy.zzz"}' -H "Content-type: application/json" https://rocky-reef-50761.herokuapp.com/email/validate
 ```
 
 Deploy Docker image

@@ -4,7 +4,7 @@
   "description": "A starting point for Node.js express apps with TypeScript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mfbx9da4"
+    "url": "https://github.com/mfbx9da4/deep-email-validator-express"
   },
   "author": "David Alberto Adler",
   "license": "MIT",
