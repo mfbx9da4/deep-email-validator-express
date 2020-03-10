@@ -1,5 +1,17 @@
 # Deep Email Validation Endpoint
 
+## Demo
+
+https://deep-email-validator.herokuapp.com/
+
+## Docker Hub
+
+https://hub.docker.com/repository/docker/mfbx9da4/validate-email-endpoint
+
+## Frontend Demo
+
+https://codesandbox.io/s/formik-asynchronous-email-validation-example-bzdng
+
 ## Getting Started
 
 ```
