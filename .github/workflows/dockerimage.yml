@@ -11,6 +11,6 @@ jobs:
           name: mfbx9da4/validate-email-endpoint
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          registry: hub.docker.com
+          # registry: hub.docker.com
           # docker tag <image> registry.heroku.com/<app>/<process-type>
           # docker push registry.heroku.com/<app>/<process-type>
