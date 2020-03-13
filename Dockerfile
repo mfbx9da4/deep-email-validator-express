@@ -6,8 +6,6 @@ ENV NODE_APP_INSTANCE $NODE_APP_INSTANCE
 ENV PORT $PORT
 ENV NODE_ENV $NODE_ENV
 
-RUN pwd
-
 # Create app directory
 RUN mkdir -p /app
 WORKDIR /app
@@ -15,17 +13,11 @@ WORKDIR /app
 # Install app dependencies
 COPY package.json /app
 COPY yarn.lock /app
-RUN ls -halt
-RUN yarn -v
 RUN yarn --production=false
-RUN ls -halt
-RUN ls ./node_modules/
-RUN ls ./node_modules/typescript
 
 # Bundle app source
 COPY . /app
 
-RUN ls -halt
 RUN yarn build
 CMD yarn start
 EXPOSE $PORT
