@@ -13,10 +13,10 @@
     "dev": "yarn watch-node",
     "watch-node": "nodemon dist/index.js",
     "test": "jest --verbose",
-    "build": "./node_modules/typescript/bin/tsc -v && ./node_modules/typescript/bin/tsc ",
+    "build": "tsc -v && tsc ",
     "watch-test": "yarn test -- --watchAll",
-    "watch-ts": "./node_modules/typescript/bin/tsc -w",
-    "lint": "./node_modules/typescript/bin/tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
+    "watch-ts": "tsc -w",
+    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "debug": "yarn build && yarn watch-debug",
     "run-debug": "nodemon --inspect dist/server.js"
   },
@@ -30,7 +30,9 @@
     "forever": "^2.0.0",
     "lodash": "^4.17.15",
     "morgan": "^1.9.1",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
@@ -48,8 +50,6 @@
     "jest": "^24.9.0",
     "nodemon": "^1.19.2",
     "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
-    "tslib": "^1.11.1",
-    "typescript": "3.8.3"
+    "ts-node": "^8.4.1"
   }
 }
