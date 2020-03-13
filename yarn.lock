@@ -342,6 +342,11 @@
   dependencies:
     "@types/express" "*"
 
+"@types/disposable-email-domains@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/disposable-email-domains/-/disposable-email-domains-1.0.1.tgz#b7675d79f941073bdb3e378d77025a20a3978bb7"
+  integrity sha1-t2ddeflBBzvbPjeNdwJaIKOXi7c=
+
 "@types/errorhandler@^1.5.0":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@types/errorhandler/-/errorhandler-1.5.0.tgz#2e6be2e419e505130c6342d11b3981867db6de2b"
@@ -1353,15 +1358,16 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-deep-email-validator@^0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/deep-email-validator/-/deep-email-validator-0.1.12.tgz#f124f6a7d77d632b7c847e7a4e6ffa524416181a"
-  integrity sha512-HtYi0fDWkcC3ZSxJVUnGX7R4mUt9lBS+VkrmTItwzLkaS60WxsXROb4sTB94c2Fp5UeOIYgTcJIARhMnJFX71A==
+deep-email-validator@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/deep-email-validator/-/deep-email-validator-0.1.13.tgz#14f12f3a0dcdf0340d841ac760a479ba7489fca9"
+  integrity sha512-aQ8y50DTQrR+JfSBt9bnOkn+vgvcvhqXrmbozxvPdmyQlZc2OrDm2IcxFVOEZ5aX53tk79GH/hxEwp35HKiX/g==
   dependencies:
+    "@types/disposable-email-domains" "^1.0.1"
     axios "^0.19.2"
+    disposable-email-domains "^1.0.53"
     lodash "^4.17.15"
     mailcheck "^1.1.1"
-    validator "^12.2.0"
 
 deep-equal@*:
   version "2.0.1"
@@ -1477,6 +1483,11 @@ director@1.2.7:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/director/-/director-1.2.7.tgz#bfd3741075fd7fb1a5b2e13658c5f4bec77736f3"
   integrity sha1-v9N0EHX9f7GlsuE2WMX0vsd3NvM=
+
+disposable-email-domains@^1.0.53:
+  version "1.0.53"
+  resolved "https://registry.yarnpkg.com/disposable-email-domains/-/disposable-email-domains-1.0.53.tgz#0025fb525ca518e865d8af9e2ac407544e434b74"
+  integrity sha512-nutItDoDcGZxrRj66I/0iLS9H3np4Pq2CCAUR8vWwMyu0vcTgSv+xHFEf9897wP/JBavfN1kyG31WKsUTPpx3A==
 
 doctrine@^3.0.0:
   version "3.0.0"
@@ -5231,11 +5242,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
-
-validator@^12.2.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-12.2.0.tgz#660d47e96267033fd070096c3b1a6f2db4380a0a"
-  integrity sha512-jJfE/DW6tIK1Ek8nCfNFqt8Wb3nzMoAbocBF6/Icgg1ZFSBpObdnwVY2jQj6qUqzhx5jc71fpvBWyLGO7Xl+nQ==
 
 vary@^1, vary@~1.1.2:
   version "1.1.2"

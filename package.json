@@ -24,7 +24,7 @@
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "deep-email-validator": "^0.1.12",
+    "deep-email-validator": "^0.1.13",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "forever": "^2.0.0",
