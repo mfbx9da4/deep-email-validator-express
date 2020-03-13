@@ -1353,10 +1353,10 @@ decode-uri-component@^0.2.0:
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
 
-deep-email-validator@^0.1.11:
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/deep-email-validator/-/deep-email-validator-0.1.11.tgz#c22d4b49b86a63e1bf119451296a05d336da0460"
-  integrity sha512-MTvutYOkePts1MmeCcgksj3KB8dc+vbuvZjX4jAnPYKS5HtzREki330PVxaYacDf1wSacFsmi/Wh2BO+oko1GQ==
+deep-email-validator@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/deep-email-validator/-/deep-email-validator-0.1.12.tgz#f124f6a7d77d632b7c847e7a4e6ffa524416181a"
+  integrity sha512-HtYi0fDWkcC3ZSxJVUnGX7R4mUt9lBS+VkrmTItwzLkaS60WxsXROb4sTB94c2Fp5UeOIYgTcJIARhMnJFX71A==
   dependencies:
     axios "^0.19.2"
     lodash "^4.17.15"
