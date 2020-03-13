@@ -6,7 +6,6 @@ ENV NODE_APP_INSTANCE $NODE_APP_INSTANCE
 ENV PORT $PORT
 ENV NODE_ENV $NODE_ENV
 
-RUN echo pwd
 RUN pwd
 
 # Create app directory
@@ -18,11 +17,9 @@ COPY package.json /app
 COPY yarn.lock /app
 RUN ls -halt
 RUN yarn -v
-RUN yarn
+RUN NODE_ENV=development yarn
 RUN ls -halt
-RUN echo "ls ./node_modules/"
 RUN ls ./node_modules/
-RUN echo "ls ./node_modules/typescript"
 RUN ls ./node_modules/typescript
 
 # Bundle app source
