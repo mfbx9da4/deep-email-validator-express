@@ -62,10 +62,10 @@ server.listen(app.get('port'), function() {
 // Keep the endpoint alive
 const keepAlive = async () => {
   try {
-    await axios.get('https://deep-email-validator.herokuapp.com/')
+    await axios.get('https://deep-email-validator.herokuapp.com/?email=a')
     console.log('Keep Alive')
   } catch (e) {
-    console.log('Error pinging endpoint')
+    console.log('Error pinging endpoint', e.response.data)
   }
   setTimeout(keepAlive, 1000 * 60 * 3)
 }
