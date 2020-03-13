@@ -6,6 +6,9 @@ ENV NODE_APP_INSTANCE $NODE_APP_INSTANCE
 ENV PORT $PORT
 ENV NODE_ENV $NODE_ENV
 
+RUN echo pwd
+RUN pwd
+
 # Create app directory
 RUN mkdir -p /app
 WORKDIR /app
