@@ -22,5 +22,5 @@ jobs:
         with:
           name: deep-email-validator/web
           username: _
-          password: ${{ DOCKER_PASSWORD_HEROKU }}
+          password: ${{ secrets.DOCKER_PASSWORD_HEROKU }}
           registry: registry.heroku.com
