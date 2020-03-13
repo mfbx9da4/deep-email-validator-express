@@ -17,7 +17,7 @@ COPY package.json /app
 COPY yarn.lock /app
 RUN ls -halt
 RUN yarn -v
-RUN NODE_ENV=development yarn
+RUN yarn --production=false
 RUN ls -halt
 RUN ls ./node_modules/
 RUN ls ./node_modules/typescript

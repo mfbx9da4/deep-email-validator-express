@@ -16,3 +16,11 @@ jobs:
           # registry: hub.docker.com
           # docker tag <image> registry.heroku.com/<app>/<process-type>
           # docker push registry.heroku.com/<app>/<process-type>
+      - uses: actions/checkout@master
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: deep-email-validator/web
+          username: _
+          password: ${{ DOCKER_PASSWORD_HEROKU }}
+          registry: registry.heroku.com
