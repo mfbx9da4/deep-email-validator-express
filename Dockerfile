@@ -13,11 +13,19 @@ WORKDIR /app
 # Install app dependencies
 COPY package.json /app
 COPY yarn.lock /app
+RUN ls -halt
+RUN yarn -v
 RUN yarn
+RUN ls -halt
+RUN echo "ls ./node_modules/"
+RUN ls ./node_modules/
+RUN echo "ls ./node_modules/typescript"
+RUN ls ./node_modules/typescript
 
 # Bundle app source
 COPY . /app
 
+RUN ls -halt
 RUN yarn build
 CMD yarn start
 EXPOSE $PORT
