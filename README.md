@@ -1,5 +1,7 @@
 # Deep Email Validation Endpoint
 
+![Publish Docker](https://github.com/mfbx9da4/deep-email-validator-express/workflows/Publish%20Docker/badge.svg)
+
 ## Demo
 
 https://deep-email-validator.herokuapp.com/
