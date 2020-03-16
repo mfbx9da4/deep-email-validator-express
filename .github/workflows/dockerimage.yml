@@ -1,16 +1,36 @@
 name: Publish Docker
-on: [push]
+on:
+  push:
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Publish to Registry
+      - name: Publish to Docker Hub Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: mfbx9da4/validate-email-endpoint
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          # registry: hub.docker.com
-          # docker tag <image> registry.heroku.com/<app>/<process-type>
-          # docker push registry.heroku.com/<app>/<process-type>
+      # - uses: actions/checkout@master
+      # - name: Publish to Heroku Registry
+      #   uses: elgohr/Publish-Docker-Github-Action@master
+      #   with:
+      #     name: deep-email-validator/web
+      #     username: _
+      #     password: ${{ secrets.DOCKER_PASSWORD_HEROKU }}
+      #     registry: registry.heroku.com
+
+      - name: Login to Heroku Container registry
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:login
+      - name: Build and push
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:push -a deep-email-validator web
+      - name: Release
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: heroku container:release -a deep-email-validator web

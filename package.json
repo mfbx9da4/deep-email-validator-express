@@ -1,7 +1,7 @@
 {
   "name": "express-typescript-starter",
   "version": "0.1.0",
-  "description": "A starting point for Node.js express apps with TypeScript",
+  "description": "Basic express endpoint using deep email validator",
   "repository": {
     "type": "git",
     "url": "https://github.com/mfbx9da4/deep-email-validator-express"
@@ -24,7 +24,7 @@
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "deep-email-validator": "^0.1.11",
+    "deep-email-validator": "^0.1.13",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "forever": "^2.0.0",
@@ -50,6 +50,6 @@
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
     "tslib": "^1.11.1",
-    "typescript": "3.8.3"
+    "typescript": "^3.8.3"
   }
 }

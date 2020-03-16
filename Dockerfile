@@ -13,7 +13,8 @@ WORKDIR /app
 # Install app dependencies
 COPY package.json /app
 COPY yarn.lock /app
-RUN yarn
+RUN yarn --production=false
+RUN cat node_modules/deep-email-validator/package.json
 
 # Bundle app source
 COPY . /app
