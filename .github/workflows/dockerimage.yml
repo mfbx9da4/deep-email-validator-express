@@ -13,15 +13,6 @@ jobs:
           name: mfbx9da4/validate-email-endpoint
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      # - uses: actions/checkout@master
-      # - name: Publish to Heroku Registry
-      #   uses: elgohr/Publish-Docker-Github-Action@master
-      #   with:
-      #     name: deep-email-validator/web
-      #     username: _
-      #     password: ${{ secrets.DOCKER_PASSWORD_HEROKU }}
-      #     registry: registry.heroku.com
-
       - name: Login to Heroku Container registry
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
