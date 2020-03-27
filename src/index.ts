@@ -6,7 +6,7 @@ import logger from 'morgan'
 import bodyParser from 'body-parser'
 import errorHandler from 'errorhandler'
 import cors from 'cors'
-import axios from 'axios'
+import { keepAlive } from './keepAlive'
 
 const app = express()
 
@@ -59,16 +59,6 @@ server.listen(app.get('port'), function() {
   console.log('Express server listening at http://localhost:' + app.get('port'))
 })
 
-// Keep the endpoint alive
-const keepAlive = async () => {
-  try {
-    await axios.get('https://deep-email-validator.herokuapp.com/?email=a')
-    console.log('Keep Alive')
-  } catch (e) {
-    console.log('Error pinging endpoint', e.response.data)
-  }
-  setTimeout(keepAlive, 1000 * 60 * 3)
-}
 keepAlive()
 
 export default server
